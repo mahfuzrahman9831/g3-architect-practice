@@ -16,7 +16,7 @@ header{
 
 nav {
     display: flex;
-    padding: 30px 240px;
+    padding: 30px 220px;
     justify-content: space-between;
     align-items: center;
 }
@@ -67,5 +67,110 @@ nav ul li a {
 .btn-primary{
     background-color: #FF900E;
     border:none;
+    font-size: 1.25rem;
+    color: white;
+    padding: 20px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    
+}
+
+.banner img{
+    margin-top: 30px;
+    width: 100%;
+    /* max-width: 1440px; */
+    /* justify-content: center; */
+}
+
+/* main section styles */
+
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.quick-list{
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.quick-list-details{
+    margin-left: 50px;
+    
+}
+
+.employee{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    
+}
+
+.quick-list-text{
+    color: #727272;
+    font-size: 2.8rem;
+    font-weight: normal;
+}
+
+.of-our{
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.features{
+    color: #FF900E;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+/* features section style start */
+
+.features-container{
+    display: flex;
+    margin-top: 80px;
+    max-width: 1440px;
+    justify-content: space-between;
+    /* max-width: 1055px; */
+}
+
+.features-title{
+    max-width: 600px;
+}
+
+.feature-heading{
+    font-size: 2.8rem;
+}
+
+.features-description{
+    color: #727272;
+    font-size: 1rem;
+}
+
+/* .feature-card{
+    box-shadow: 2px 2px 2px black;
+} */
+
+.feature-card-description{
+    color: #727272;
+}
+
+
+/* responsive media queries for mobile */
+
+@media screen and (max-width:576px) {
+
+    nav{
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav>ul{
+        padding: 0;
+    }
+
+    .banner img{
+        width: 100%;
+    }
     
 }
