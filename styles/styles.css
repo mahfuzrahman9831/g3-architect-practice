@@ -1,14 +1,99 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* ==========
+         css reset
+            ================= */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+
+/* === global variables ======= */
+:root{
+
+}
+
+
+/* ====== utility classes======= */
+/* .container{
+
+} */
+
+.flex{
+
+}
+
+.flex-center{
+
+}
+
+.btn{
+
+}
+
+.btn-transparent{
+    background-color: transparent;
+}
+
+
+
+
+
 
 *{
-        font-family: "Work Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: <weight>;
-        font-style: normal;
-    
+        font-family: "Work Sans", sans-serif;   
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
 }
+
+/* utility classes */
+.container{
+display: block;
+width: 100%;
+max-width: 1440px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+
 
 header{
     background-color: #fff4e6;
@@ -48,6 +133,7 @@ nav ul li a {
 
 .banner-contain{
     max-width: 800px;
+    /* background-color: red; */
     text-align: center;
     margin: 0 auto;
 }
@@ -76,10 +162,11 @@ nav ul li a {
 }
 
 .banner img{
-    margin-top: 30px;
     width: 100%;
-    /* max-width: 1440px; */
-    /* justify-content: center; */
+    margin: 0 auto;
+    max-width: 1440px;
+    margin-top: 30px;
+    /* align-items: center; */
 }
 
 /* main section styles */
@@ -128,14 +215,29 @@ main{
 
 .features-container{
     display: flex;
-    margin-top: 80px;
+    margin-top: 130px;
     max-width: 1440px;
     justify-content: space-between;
+    gap: 100px;
     /* max-width: 1055px; */
 }
 
-.features-title{
-    max-width: 600px;
+.features-title .feature-heading{
+    /* max-width: 600px; */
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+
+.feature-card-container .feature-card{
+    padding: 30px;
+    width: 585px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+
+}
+.feature-card{
+    margin-bottom: 20px;
 }
 
 .feature-heading{
@@ -147,14 +249,106 @@ main{
     font-size: 1rem;
 }
 
-/* .feature-card{
-    box-shadow: 2px 2px 2px black;
+/* .feature-card-container{
+    display: flex;
+    flex-direction: row;
+
 } */
 
 .feature-card-description{
     color: #727272;
 }
 
+.features-img img{
+    height: 90%;
+    margin-left: 80px;
+}
+
+
+.ten-years-badge{
+    background-color: #FF900E;
+    color: #FFF;
+    text-align: center;
+    width: 340px;
+    height: 200px;
+    border-radius: 8px;
+    padding: 40px;
+    position: relative;
+    bottom: 100px;
+}
+
+.ten-years-badge h1{
+    font-size: 4.06rem;
+    margin: 0;
+}
+
+.ten-years-badge p{
+    font-size: 1.5rem;
+}
+
+/* some facts styles */
+
+.some-facts-section{
+    margin-top: 200px;
+}
+
+.some-facts-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    gap: 15px;
+}
+
+.some-facts-card{
+    border: 2px solid #FF900E;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    width: 180px;
+    
+}
+
+/* sponsors style */
+
+.sponsor{
+    text-align: center;
+}
+
+
+.sponsor h2{
+    font-size: 2.8rem;
+    margin-top: 100px;
+}
+
+
+.sponsor-logo-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.sponsor-logo-container img{
+    width: 155px;
+}
+
+footer{
+    max-width: 1440px;
+    height: 80px;
+    background-color: #FFF4E7;
+    margin: 100px auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+footer p{
+}
+
+.feature-card-description{
+    padding: 0;
+}
 
 /* responsive media queries for mobile */
 
@@ -171,6 +365,63 @@ main{
 
     .banner img{
         width: 100%;
+    }
+
+    /* quick list styles */
+
+    .quick-list{
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .quick-list-details{
+        margin: 15px;
+    }
+
+    .employee{
+        grid-template-columns: 1fr;
+    }
+
+    .features-container{
+        flex-direction: column;
+        width: 95%;
+        /* margin: 0; */
+        /* padding: 0; */
+        margin: 0 10px;
+    }
+
+    .features-container .feature-card{
+        width: auto;
+    }
+
+    .features-img img{
+        margin: 0;
+        width: 100%;
+    }
+
+    .feature-card{
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .ten-years-badge{
+        height: 70%;
+        width: 70%;
+        margin: 0 auto;
+        bottom: 0;
+
+    }
+
+    /* some facts style */
+
+    .some-facts-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .some-facts-section{
+        margin-top: 50px;
     }
     
 }
